@@ -23,17 +23,15 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    firstName: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    graduationStatus: {
+      type: DataTypes.ENUM,
+      values: ['graduated', 'inProgress', 'suspended'],
     },
-    lastName: {
-      type: DataTypes.STRING,
+    role: {
+      type: DataTypes.ENUM,
+      values: ['admin', 'student', 'teacher'],
       allowNull: false,
-    },
-    fatherName: {
-      type: DataTypes.STRING,
-      allowNull: true,
+      defaultValue: 'student',
     },
   },
   { timestamps: true },

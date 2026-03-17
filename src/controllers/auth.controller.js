@@ -1,5 +1,5 @@
 const signIn = async (req, res) => {
-  let result = await authService.signIn(req.user.id, req.body);
+  let result = await authService.signIn(req.body);
 
   res.json(result);
 };
